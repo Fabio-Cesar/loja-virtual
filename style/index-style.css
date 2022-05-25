@@ -1,0 +1,471 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-bold-webfont.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-bold-webfont.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-bold-webfont.svg#open_sansregular") format("svg");
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: local("Open Sans Condensed Light"), local("OpenSansCondensed-Light"), url("https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMR7eS2Ao.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: local("Open Sans Condensed Bold"), local("OpenSansCondensed-Bold"), url("https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuXMR7eS2Ao.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Museo-W01-700";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3b3d99a2-6b36-4912-a93e-29277020a5cf.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/28d74e9b-4ea9-4e3c-b265-c67a72c66856.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b432b4e1-014a-4ed8-865c-249744f856b0.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/8e63fd1e-adc9-460e-9ef7-bbf98ee32a71.svg#8e63fd1e-adc9-460e-9ef7-bbf98ee32a71") format("svg");
+    font-display: block;
+}
+
+:root {
+    --pink: #F55C4A;
+    --dark-pink: #FF4040;
+    --cyan: #47A5DE;
+    --gray: #444444;
+    --light-gray: #888888;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+	font: inherit;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Open Sans Condensed", sans-serif;
+    color: var(--gray);
+}
+
+nav {
+    padding: 5vh 0vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    width: 20vw;
+    height: 10vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 160%;
+    letter-spacing: 7.5px;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    font-weight: 300;
+    font-size: 100%;
+    letter-spacing: 2px;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.bag {
+    min-width: 24px;
+    max-width: 24px;
+}
+
+.cyan {
+    color: var(--cyan);
+}
+
+.pink {
+    color: var(--pink);
+}
+
+.active-page {
+    color: var(--pink);
+}
+
+.active-page:hover, .page:hover {
+    transition: 0.6s;
+    color: var(--cyan);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header {
+    padding: 10vh 0vw;
+    align-self: center;
+    font-size: 280%;
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+#highlight {
+    display: grid;
+    justify-content: center;
+    grid-template:
+        "highlight1 about" 300px
+        "highlight1 highlight2" 300px
+        "highlight3 highlight4" 400px
+        / 602px 318px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.highlight1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: highlight1;
+}
+
+.translate {
+    transform: translateX(80px);
+}
+
+.title {
+    font-size: 400%;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.description {
+    font-size: 130%;
+    font-weight: 300;
+}
+
+.highlight1 button {
+    width: 130px;
+    height: 38px;
+    margin-top: 30px;
+    background-color: #ffffff00;
+    border-color: var(--pink);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 17.5px;
+    font-family: "Museo-W01-700", sans-serif;
+    font-size: 90%;
+    font-weight: 700;
+    color: var(--pink);
+}
+
+.highlight1 button:hover {
+    transition: 0.6s;
+    cursor: pointer;
+    background-color: var(--pink);
+    color: #ffffff;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    grid-area: about;
+}
+
+.translate2 {
+    transform: translateX(25px) translateY(20px);
+}
+
+.title2 {
+    font-size: 180%;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.about button, .highlight4 button {
+    width: 130px;
+    height: 38px;
+    margin-top: 15px;
+    background-color: #ffffff00;
+    border-color: var(--cyan);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 19px;
+    font-family: "Museo-W01-700", sans-serif;
+    font-size: 90%;
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+.about button:hover, .highlight4 button:hover {
+    transition: 0.6s;
+    cursor: pointer;
+    background-color: var(--cyan);
+    color: #ffffff;
+}
+
+.highlight2 {
+    grid-area: highlight2;
+}
+
+.highlight3 {
+    grid-area: highlight3;
+}
+
+.highlight4 {
+    position: relative;
+    right: 284px;
+    display: flex;
+    flex-direction: column;
+    grid-area: highlight4;
+}
+
+#recent {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    margin-top: 20px;
+    font-size: 120%;
+    font-weight: 700;
+}
+
+.price {
+    font-family: "Museo-W01-700", sans-serif;
+    font-size: 90%;
+    font-weight: 700;
+    color: var(--light-gray);
+}
+
+footer {
+    padding: 8vh 5.4vw 11vh 8.1vw;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 75px;
+    background-color: var(--pink);
+    color: #ffffff;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infotext {
+    font-size: 90%;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.infotext::first-line {
+    font-size: 120%;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.subscribetext {
+    margin-right: 20px;
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.subscribetext::first-line {
+    font-size: 200%;
+    font-weight: 700;
+}
+
+.input {
+    width: 340px;
+    height: 40px;
+    padding-left: 20px;
+    margin-right: 5px;
+    background-color: #ffffff80;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--dark-pink);
+}
+
+.input:focus {
+    outline: none;
+    background-color: var(--pink);
+    border-color: #ffffff;
+}
+
+.input::placeholder {
+    color: #ffffff;
+}
+
+.subscribe-button {
+    width: 100px;
+    height: 40px;
+    background-color: #ffffff;
+    font-family: "Museo-W01-700", sans-serif;
+    font-weight: 700;
+    font-size: 90%;
+    color: var(--pink);
+}
+
+.subscribe-button:hover {
+    transition: 0.6s;
+    cursor: pointer;
+    color: var(--gray);
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.chat {
+    position: fixed;
+    bottom: 4vh;
+    right: 2vw;
+    width: 16vw;
+    min-width: 200px;
+    height: 8vh;
+    min-height: 40px;
+    display: flex;
+    border-style: none;
+    border-radius: 4vh;
+    background-color: var(--cyan);
+    justify-content: center;
+    align-items: center;
+    gap: 0.8vw;
+    font-size: 110%;
+    color: #ffffff;
+}
+
+.chat:hover {
+    cursor: pointer;
+}
+
+@media (max-height: 500px) {
+    .chat {
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .subscribe {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    #highlight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .translate {
+        transform: none;
+    }
+
+    .translate2 {
+        transform: none;
+    }
+
+    .highlight1 {
+        min-width: 400px;
+        min-height: 370px;
+        background-image: url("../assets/images/destaque1.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .about {
+        min-width: 300px;
+        min-height: 270px;
+        background-image: url("../assets/images/about.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .highlight4 {
+        position: relative;
+        right: 0;
+        min-width: 300px;
+        min-height: 213px;
+        background-image: url("../assets/images/destaque4.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #recent {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+    }
+
+    h1 {
+        width: auto;
+        height: auto;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        min-width: 60px;
+    }
+
+    footer {
+        padding: 25px 2px 40px;
+    }
+
+    .input {
+        padding: 0;
+    }
+}
+
+
+@media (min-width: 768px) {
+    body {
+        padding: 0vh 15vw;
+    }
+}
